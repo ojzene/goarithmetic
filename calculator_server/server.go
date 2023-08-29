@@ -20,6 +20,7 @@ var (
 type server struct{}
 
 func (s *server) EvaluateExpression(ctx context.Context, req *calculatorpb.ExpressionRequest) (*calculatorpb.ExpressionResponse, error) {
+	log.Printf("Received expression: %v", req.GetExpression())
 	expression := req.Expression
 	result := evaluateExpression(expression)
 	return &calculatorpb.ExpressionResponse{Result: result}, nil
