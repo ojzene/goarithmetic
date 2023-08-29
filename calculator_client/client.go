@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ojzene/goarithmetic/calculator/calculatorpb"
+	"github.com/ojzene/goarithmetic/calculatorpb"
 
 	"google.golang.org/grpc"
 )
