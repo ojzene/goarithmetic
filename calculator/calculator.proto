@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/ojzene/goarithmetic/calculator";
+option java_multiple_files = true;
+option java_package = "io.grpc.goarithmetic.calculator";
+option java_outer_classname = "CalculatorProto";
+
+package calculator;
+
+service CalculatorService {
+  rpc EvaluateExpression(ExpressionRequest) returns (ExpressionResponse);
+}
+
+message ExpressionRequest {
+  string expression = 1;
+}
+
+message ExpressionResponse {
+  int32 result = 1;
+}
